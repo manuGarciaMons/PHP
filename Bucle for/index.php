@@ -7,7 +7,6 @@
  *  bucle de instrucciones
  * }
  */
-
  $resultado =0;
  for ($i=0; $i <=100 ; $i++) { 
      $resultado = $resultado + $i;
@@ -16,8 +15,6 @@
  echo "<h1> El resultad es: $resultado</h1>";
 
  // ejemplo de la tabla de multiplicar 
-
-
  if (isset($_GET['numero'])) {
     $numero = (int)$_GET['numero']; // cambiar el tipo de dato
     
