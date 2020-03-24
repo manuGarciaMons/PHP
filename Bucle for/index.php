@@ -4,6 +4,7 @@
 
 /**
  * for (expresion inicial, condición, incrementar contador){
+ * 
  * }
  */
 ?>
