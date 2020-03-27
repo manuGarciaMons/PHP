@@ -62,4 +62,6 @@ function calculadora($numero1, $numero2){
 }
 
 calculadora(123,123);
+calculadora(12,123);
+calculadora(123,13);
 ?>
