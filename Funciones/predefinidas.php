@@ -4,9 +4,7 @@
 /**
  * 
  * FUNCIONES PREDEFINIDAS DE PHP
-
  */
-
  // para debuguear
  $nombre = "Manuela Garcia";
  var_dump($nombre);
@@ -88,13 +86,11 @@ echo "<br/>";
 
 $cadena = "12345";
 echo strlen($cadena);
-
 echo "<br/>";
 
 // encontrar la posicion de un caracter determiando 
 $frase = "la vida es bella";
 echo strpos($frase, "vida");
-
 echo "<br/>";
 
 // reemplazar contenido de un string 
