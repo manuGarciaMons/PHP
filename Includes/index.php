@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina 1</title>
-</head>
+<?php
+require_once 'includes/cabecera.php'
+?>
+
+
 <body>
-    
-</body>
-</html>
+
+    <div>
+        <h2>Esta es la pagina de inicio</h2>
+        <p>
+            Texto de prueba de la pagina de incio
+        </p>
+    </div>
+ <?php
+include 'includes/footer.php'
+?>
