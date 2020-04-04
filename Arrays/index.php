@@ -17,6 +17,21 @@ echo $peliculas[0];
 echo "<br/>";
 echo $cantantes[1];
 
+// recorrer un array con el buble for
+echo "<h1> Listado de peliculas</h1>";
+echo "<ul>";
+for ($i=0; $i <count($peliculas); $i++) { 
+    echo "<li>". $peliculas[$i]. "</li>";
+}
 
+echo "</ul>";
+
+// recorrer con foreach
+echo "<h1> Listado de cantantes</h1>";
+echo "<ul>";
+foreach ($cantantes as  $cantante) {
+    echo  "<li> ". $cantantes . "</li>";
+}
+echo "</ul>";
 
 ?>
