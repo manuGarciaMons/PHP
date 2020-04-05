@@ -16,7 +16,11 @@ var_dump($cantantes);
 echo $peliculas[0];
 echo "<br/>";
 echo $cantantes[1];
-
+$personas = array(
+'nombre' => 'victor',
+'apellidos' => 'Robles',
+'web' => 'mgarciamons'
+);
 // recorrer un array con el buble for
 echo "<h1> Listado de peliculas</h1>";
 echo "<ul>";
@@ -33,5 +37,30 @@ foreach ($cantantes as  $cantante) {
     echo  "<li> ". $cantantes . "</li>";
 }
 echo "</ul>";
+
+
+// arrays multidimencipnales
+
+$contactos = array(
+    array(
+        'nombre' => ' manuela',
+        'email' => 'Mgarciamons '
+     ),
+
+     array(
+        'nombre' => ' manuela',
+        'email' => 'Mgarciamons@ '
+     ),
+     array(
+        'nombre' => ' manuela',
+        'email' => 'Mgarciamons@gmail.com '
+     ),
+
+);
+echo $contactos[1]['nombre'];
+
+foreach ($contactos as $key => $contato) {
+    var_dump($contato['nombre']);
+}
 
 ?>
