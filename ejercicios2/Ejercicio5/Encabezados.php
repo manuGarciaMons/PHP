@@ -1,6 +1,6 @@
 <tr>
 
-    <?php foreach ($categorias as $categorias) : ?>
+    <?php foreach ($categorias as $categoria) : ?>
         <th><?= $categoria ?></th>
     <?php endforeach  ?>
 </tr>
