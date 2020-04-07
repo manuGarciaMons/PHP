@@ -49,10 +49,19 @@
             Europa <input type="radio" name="continente" id="" value="Europa">
             Asia <input type="radio" name="continente" id="" value="Asia">
         </p>
-
         <label for="web">Pagina web:</label>
         <p> <input type="url" name="web" id=""></p>
-        
+
+        <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+
+        Peliculas:
+        <select name="peliculas" id="">
+            <option value="Spiderman">Spiderman</option>
+            <option value="Los increibles">Los increibles</option>
+            <option value="Batman el caballero de la noche">Batman el caballero de la noche</option>
+            <option value="Piratas del caribe">Piratas del caribe </option>
+        </select>
+
 
         <input type="submit" value="Enviar">
     </form>
