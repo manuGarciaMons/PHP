@@ -5,4 +5,5 @@ if (isset($_POST['titulo']) && isset($_POST['descripcion'])) {
     echo "<h2>".$_POS['descripcion']. "</h2>";
 }
 
+
 ?>
