@@ -17,6 +17,21 @@
         if ($error == 'faltan_valores') {
             echo '<strong  style="color:red"> Introduce todos los datos en todos los campos del formulario  </strong> ';
         }
+        if ($error == 'nombre') {
+            echo '<strong  style="color:red"> Introduce bien el nombre  </strong> ';
+        }
+        if ($error == 'apellidos') {
+            echo '<strong  style="color:red"> Introduce bien los apellidos  </strong> ';
+        }
+        if ($error == 'edad') {
+            echo '<strong  style="color:red"> Introduce una edad correcta  </strong> ';
+        }
+        if ($error == 'email') {
+            echo '<strong  style="color:red"> El correo es erroneo  </strong> ';
+        }
+        if ($error == 'password') {
+            echo '<strong  style="color:red"> Introduce una contraseña de mas de 5 caracteres </strong> ';
+        }
     }
     ?>
     <form action="procesar_formulario.php" method="post">
@@ -34,7 +49,7 @@
         <input type="email" name="email" id="" required= "required"> <br />
 
         <label for="password">Password</label> <br />
-        <input type="password" name="password" id="" required= "required"> <br />
+        <input type="password" name="password" id="" required= "required" minlength="5"> <br />
 
         <input type="submit" value="Enviar"> <br/>
     </form>
