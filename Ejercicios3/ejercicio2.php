@@ -23,4 +23,3 @@
  }else{
     echo "pasa por GET un email..";
  }
- ?>
