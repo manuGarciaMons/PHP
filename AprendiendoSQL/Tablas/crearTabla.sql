@@ -15,9 +15,10 @@ CREAR TABLA
 */
 
 CREATE TABLE usuarios (
-id     int(11),
-nombre   varchar(100),
-apellidos varchar(255),
-email   varchar(100),
-password varchar(255)
+id     int(11)  auto_increment not null,
+nombre   varchar(100) not null,
+apellidos varchar(255) not null,
+email   varchar(100) not null,
+password varchar(255) default'0000'
+constraint pk_usuarios primary key(id)
 );
