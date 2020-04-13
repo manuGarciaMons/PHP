@@ -32,15 +32,16 @@ SELECT * FROM categorias WHERE
 id  IN(SELECT categoria_id FROM entradas
     GROUP BY categoria_id HAVING COUNT(categoria_id) >=3);
 
+
 /*mostrar los usuarios que crearon una entrada un martes*/
 SELECT * FROM  usuarios WHERE id IN
 (SELECT usuario_id, titulo, fecha FROM entradas WHERE DAYOFWEEK(fecha)=3);
 
 /*mostrar el nombre del usuario que tenga mas entradas*/
-SELECT CONCAT(nombre, ' ', apellidos) AS 'El usuario con mas entradas' FROM usuarios WHERE id =
-(SELECT usuario_id,  COUNT(id) FROM entradas
+/*SELECT CONCAT(nombre, ' ', apellidos) AS 'El usuario con mas entradas' FROM usuarios WHERE id =
+/*(SELECT usuario_id,  COUNT(id) FROM entradas
  GROUP BY usuario_id ORDER BY COUNT(id) DESC LIMIT 1);
 
 /*mostrar las categorias sin entradas*/
-SELECT * FROM categorias WHERE id NOT  IN 
-(SELECT categoria_id FROM entradas);
+/*SELECT * FROM categorias WHERE id NOT  IN 
+(SELECT categoria_id FROM entradas); */ 
