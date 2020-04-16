@@ -22,3 +22,15 @@
         echo "<h2>".$nota['titulo']. "</h2>";
         echo $nota['descripcion']. "<br/>";
     }
+    // INSERTAR DATOS 
+    $sql = "INSERT INTO notas VALUES(null, 'Nota Desde PHP', 'Esto es una nota de PHP', 'Green')";
+    $insert = mysqli_query($conexion, $sql );
+
+
+    echo "<hr>";
+    if ($insert) {
+        echo "Datos insertados correstamente";
+    }else{
+        echo "Error: ". mysqli_error($conexion);
+    }
+
