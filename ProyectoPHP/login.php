@@ -13,16 +13,27 @@ if (isset($_POST)) {
 
     if ($login && mysqli_num_rows($login) == 1) {
         $usuario = mysqli_fetch_assoc($login);
-        
-      $verify=  password_verify($password, $usuario['password']);
 
-      if ($verify) {
-          # code...
-      }
+        $verify =  password_verify($password, $usuario['password']);
+
+        if ($verify) {
+
+            $_SESSION['usuario']= $usuario;
+
+            if(isset($_SESSION['error_login'])){
+                session_unset($_SESSION['error_login']);
+            }
+        } else {
+            $_SESSION['error_login']= "login incorrecto";
+
+        }
     } else {
+
+        $_SESSION['error_login']= "login incorrecto";
     }
 }
 
+header('location:index.php');
 // comprobar la contraseña
 
 // consultar las credenciales del usuario
