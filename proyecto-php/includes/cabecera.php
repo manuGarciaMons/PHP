@@ -3,6 +3,10 @@
 <!DOCTYPE HTML>
 <html lang="es">
 	<head>
+	<?php
+  header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+  header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
+   ?>
 		<meta charset="utf-8" />
 		<title>Blog de Videojuegos</title>
 		<link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
@@ -13,7 +17,7 @@
 			<!-- LOGO -->
 			<div id="logo">
 				<a href="index.php">
-					Blog de Videojuegos
+					BLOG DE VIDEOJUEGOS
 				</a>
 			</div>
 			
