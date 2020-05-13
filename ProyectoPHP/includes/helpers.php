@@ -1,4 +1,5 @@
 <?php
+require_once 'includes/conexion.php';
 
 function mostrarError($errores, $campo)
 {
@@ -6,7 +7,7 @@ function mostrarError($errores, $campo)
 
   $alerta = '';
   if (isset($errores[$campo]) && !empty($campo)) {
-    $alerta = "<div class= 'alerta alerta-error'>" . $errores[$campo] . '</div>';
+    $alerta = "<div clsass= 'alerta alerta-error'>" . $errores[$campo] . '</div>';
   }
 
   return $alerta;
@@ -27,4 +28,17 @@ function borrarErrores()
   }
 
   return $borrado;
+}
+
+
+function conseguirCategorias($conexion)
+{
+  $sql = "SELECT * FROM categorias ORDER BY id ASC;";
+  $categorias = mysqli_query($conexion, $sql);
+  $result = array();
+  if ($categorias && mysqli_num_rows($categorias) >= 1) {
+    $result = $categorias;
+  } else {
+  }
+  return $result;
 }
