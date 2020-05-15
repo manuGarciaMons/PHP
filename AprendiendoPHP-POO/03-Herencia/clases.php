@@ -9,7 +9,6 @@ class Persona{
     public $altura;
     public $edad;
 
-
     /**
      * @return mixed
      */
@@ -24,16 +23,6 @@ class Persona{
     public function getAltura()
     {
         return $this->altura;
-    }
-
-    /**
-     * @param mixed $altura
-     * @return Persona
-     */
-    public function setAltura($altura)
-    {
-        $this->altura = $altura;
-        return $this;
     }
 
     /**
@@ -81,12 +70,81 @@ class Persona{
         $this->nombre = $nombre;
         return $this;
     }
-  
 
-    
-    
+    /**
+     * @param mixed $altura
+     * @return Persona
+     */
+    public function setAltura($altura)
+    {
+        $this->altura = $altura;
+        return $this;
+    }
 
-    
+    public function hablar(){
+        return" Estoy hablando ";
 
-    
+    }
+
+    public function caminar(){
+        return" Estoy caminando ";
+
+    }
+
 }
+ class  informatico extends  Persona {
+
+    public $lenguajes;
+    public $experienciaProgramador;
+
+
+    public function  __construct(){
+
+        $this->lenguajes= "HTML, CSS, JS";
+        $this->experienciaProgramador= 10;
+    }
+
+
+     public function programa(){
+         return" soy programador ";
+
+     }
+
+     public function RepararOrdenador(){
+         return" Reparar ordenadores ";
+
+     }
+
+     public function hacerOfimatica(){
+         return" Estoy escribiendo en word";
+
+     }
+
+     public function sabeLenguajes($lenguajes){
+         $this->lenguajes= $lenguajes;
+
+         return $this->lenguajes;
+     }
+
+
+
+ }
+
+ class TecnicoRedes extends informatico{
+
+    public $auditarRedes;
+    public $experienciaRedes;
+
+
+    public function  __construct()
+    {
+
+        parent::__construct();
+        $this->auditarRedes = "Experto";
+        $this->experienciaRedes= 5;
+    }
+
+     public function auditoria(){
+        return "Estoy aunditando una red";
+    }
+ }
