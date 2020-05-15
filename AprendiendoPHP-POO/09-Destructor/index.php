@@ -18,6 +18,12 @@ class Usuario
         echo "Creando el objeto";
     }
 
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return "Hola,  {$this->nombre}, esta registrado con {$this->email}";
+    }
+
     public function __destruct()
     {
         // TODO: Implement __destruct() method.
@@ -27,8 +33,8 @@ class Usuario
 }
 
 $usuario = new Usuario();
+echo $usuario;
+echo $usuario->email;
 
-for ($i =0; $i<=200; $i++){
-    echo $i. "<br/>";
-}
+
 
