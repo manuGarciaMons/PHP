@@ -17,13 +17,13 @@
 
     // consulta SELECT desde php
 
-    $query =mysqli_query($conexion, "SELECT * FROM notas ");
+    $query =mysqli_query($conexion, "SELECT * FROM nota ");
     while ($nota = mysqli_fetch_assoc($query)) {
         echo "<h2>".$nota['titulo']. "</h2>";
         echo $nota['descripcion']. "<br/>";
     }
     // INSERTAR DATOS 
-    $sql = "INSERT INTO notas VALUES(null, 'Nota Desde PHP', 'Esto es una nota de PHP', 'Green')";
+    $sql = "INSERT INTO nota VALUES(null, 'Nota Desde PHP', 'Esto es una nota de PHP', 'Green')";
     $insert = mysqli_query($conexion, $sql );
 
 
