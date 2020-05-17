@@ -6,6 +6,12 @@ class Usuario extends ModeloBase {
     public $apellidos;
     public $email;
 
+
+    public function  __construct()
+    {
+        parent::__construct();
+    }
+
     /**
      * @return mixed
      */
