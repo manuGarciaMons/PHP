@@ -6,6 +6,7 @@
       <path value="$PROJECT_DIR$/Aprendiendo-LibreriasPHP/vendor/spipu/html2pdf" />
       <path value="$PROJECT_DIR$/Aprendiendo-LibreriasPHP/vendor/tecnickcom/tcpdf" />
       <path value="$PROJECT_DIR$/Aprendiendo-LibreriasPHP/vendor/stefangabos/zebra_pagination" />
+      <path value="$PROJECT_DIR$/Aprendiendo-LibreriasPHP/vendor/masterexploder/phpthumb" />
     </include_path>
   </component>
 </project>
