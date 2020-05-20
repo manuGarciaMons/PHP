@@ -7,5 +7,4 @@ class CategoriaController
     {
         echo "controlador Categoria Accion index";
     }
-
 }

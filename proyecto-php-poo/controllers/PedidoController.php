@@ -7,5 +7,4 @@ class PedidoController
     {
         echo "controlador Pedido Accion index";
     }
-
 }

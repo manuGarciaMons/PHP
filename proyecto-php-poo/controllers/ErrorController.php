@@ -7,7 +7,4 @@ class errorController
     {
         echo "<h1>La pagina que buscas no existe</h1>";
     }
-
-
-
 }
