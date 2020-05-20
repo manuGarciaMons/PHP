@@ -1,5 +1,5 @@
 <h1>Registrarse</h1>
-<form action="index.php?controller=usuario&action=save" method="post">
+<form action="<?=base_url?>usuario/save" method="post">
 
     <label for="nombre ">Nombre</label>
     <input type="text" name="nombre" required>
