@@ -11,8 +11,7 @@ class CategoriaController
 
        require_once 'views/categoria/index.php';
     }
-
-
+    
     public function  crear(){
        // Utils::isAdmin();
         require_once 'views/categoria/crear.php';
