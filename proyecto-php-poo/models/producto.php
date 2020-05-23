@@ -186,6 +186,12 @@ class Producto
         return $productos;
     }
 
+    public function  getOne(){
+        $productos = $this->db->query("SELECT * FROM productos WHERE id = {$this->getId()} ");
+
+        return $productos->fetch_object();
+    }
+
     public function save()
     {
         $sql = "INSERT INTO productos VALUES (NULL,'{$this->getCategoriaId()}' ,'{$this->getNombre()}','{$this->getDescripcion()}',{$this->getPrecio()},{$this->getStock()},null,CURDATE(), '{$this->getImagen()}');";
@@ -197,6 +203,19 @@ class Producto
         }
         return $result;
     }
+
+    public function  delete(){
+        $sql = "DELETE FROM productos WHERE id = {$this->id}";
+      $delete=  $this->db->query($sql);
+
+        $result = false;
+        if ($delete) {
+            $result = true;
+        }
+        return $result;
+    }
+
+
 
 
 
