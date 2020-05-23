@@ -4,7 +4,7 @@ if(isset($edit)&& isset($pro) && is_object($pro)): ?>
     <h1>Editar producto <?=$pro->nombre?></h1>
 
     <?php
-    $url_action = base_url."producto/edit&id=".$pro->id;
+    $url_action = base_url."producto/save&id=".$pro->id;
     ?>
 <?php else: ?>
     <h1>Crear Nuevos productos</h1>

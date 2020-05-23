@@ -41,21 +41,32 @@ class ProductoController
             $producto->setStock($stock);
             $producto->setCategoriaId($categoria);
 
-            // guardar la imagen
-            $file = $_FILES['imagen'];
-            $filename = $file['name'];
-            $mimetype = $file['type'];
+            if( isset($_FILES['imagen'])) {
+                // guardar la imagen
+                $file = $_FILES['imagen'];
+                $filename = $file['name'];
+                $mimetype = $file['type'];
 
-            if ($mimetype== "image/jpg" || $mimetype == "image/jpeg" || $mimetype== "image/png" || $mimetype == "image/gif"){
+                if ($mimetype == "image/jpg" || $mimetype == "image/jpeg" || $mimetype == "image/png" || $mimetype == "image/gif") {
 
 
-                if(!is_dir('uploads/images')){
-                    mkdir('uploads/images', 0777, true);
+                    if (!is_dir('uploads/images')) {
+                        mkdir('uploads/images', 0777, true);
+                    }
+                    $producto->setImagen($filename);
+                    move_uploaded_file($file['tmp_name'], 'uploads/images/' . $filename);
                 }
-                $producto->setImagen($filename);
-                move_uploaded_file($file['tmp_name'],'uploads/images/'. $filename );
             }
-          $save=  $producto->save();
+
+            if(isset($_GET['id'])){
+                $id = $_GET['id'];
+                $producto->setId($id);
+                $save = $producto->save();
+
+            }else {
+                $save = $producto->save();
+            }
+
           if ($save){
               $_SESSION['producto']= "complete";
           }else{
@@ -87,9 +98,7 @@ class ProductoController
         }else{
             header("Location:".base_url.'producto/gestion');
         }
-
     }
-
 
     public function  eliminar(){
         //Utils::isAdmin();
