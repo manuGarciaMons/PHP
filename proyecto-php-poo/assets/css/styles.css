@@ -390,3 +390,21 @@ margin-bottom: 20px;
     border-top: 4px solid #01b1ea;
 
 }
+
+/*CARRITO*/
+
+.total-carrito{
+    width: 295px;
+    float: right;
+}
+
+.total-carrito h3{
+    display: block;
+    float: left;
+    margin-top: 5px;
+}
+.button-pedido{
+    display: block;
+    float: right;
+    width: 100px;
+}

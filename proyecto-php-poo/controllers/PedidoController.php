@@ -68,7 +68,7 @@ class pedidoController{
         $usuario_id = $_SESSION['identity']->id;
         $pedido = new Pedido();
 
-        // Sacar los pedidos del usuario
+         //Sacar los pedidos del usuario
         $pedido->setUsuario_id($usuario_id);
         $pedidos = $pedido->getAllByUser();
 
