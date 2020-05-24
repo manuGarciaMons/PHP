@@ -48,7 +48,7 @@ class Utils
     }
 
     public static function isIdentity(){
-        if(!isset($_SESSION['identity'])){
+        if(!isset($_SESSION['identify'])){
             header("Location:".base_url);
         }else{
             return true;

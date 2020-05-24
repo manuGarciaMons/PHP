@@ -5,7 +5,7 @@
 <?php endif; ?>
 <table>
     <tr>
-        <th>Nยบ Pedido</th>
+        <th>Nro Pedido</th>
         <th>Coste</th>
         <th>Fecha</th>
         <th>Estado</th>

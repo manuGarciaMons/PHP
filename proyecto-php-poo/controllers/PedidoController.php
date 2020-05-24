@@ -9,8 +9,8 @@ class pedidoController{
     }
 
     public function add(){
-        if(isset($_SESSION['identity'])){
-            $usuario_id = $_SESSION['identity']->id;
+        if(isset($_SESSION['identify'])){
+            $usuario_id = $_SESSION['identify']->id;
             $provincia = isset($_POST['provincia']) ? $_POST['provincia'] : false;
             $localidad = isset($_POST['localidad']) ? $_POST['localidad'] : false;
             $direccion = isset($_POST['direccion']) ? $_POST['direccion'] : false;
@@ -50,10 +50,10 @@ class pedidoController{
     }
 
     public function confirmado(){
-        if(isset($_SESSION['identity'])){
-            $identity = $_SESSION['identity'];
+        if(isset($_SESSION['identify'])){
+            $identify = $_SESSION['identify'];
             $pedido = new Pedido();
-            $pedido->setUsuario_id($identity->id);
+            $pedido->setUsuario_id($identify->id);
 
             $pedido = $pedido->getOneByUser();
 
@@ -65,7 +65,7 @@ class pedidoController{
 
     public function mis_pedidos(){
         Utils::isIdentity();
-        $usuario_id = $_SESSION['identity']->id;
+        $usuario_id = $_SESSION['identify']->id;
         $pedido = new Pedido();
 
          //Sacar los pedidos del usuario
@@ -97,7 +97,7 @@ class pedidoController{
     }
 
     public function gestion(){
-        Utils::isAdmin();
+       // Utils::isAdmin();
         $gestion = true;
 
         $pedido = new Pedido();
@@ -107,7 +107,7 @@ class pedidoController{
     }
 
     public function estado(){
-        Utils::isAdmin();
+       // Utils::isAdmin();
         if(isset($_POST['pedido_id']) && isset($_POST['estado'])){
             // Recoger datos form
             $id = $_POST['pedido_id'];
