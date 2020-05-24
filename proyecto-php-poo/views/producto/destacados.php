@@ -1,36 +1,18 @@
-<h1>Productos Destacados</h1>
+<h1>Algunos de nuestros Productos </h1>
 
-<div class="product">
 
-    <img src="assets/img/logo.png" alt="">
-    <h2>Computador iMac</h2>
-    <p>1900 euros</p>
-    <a href="" class="button">Comprar</a>
-</div>
+<?php while($product = $productos->fetch_object()): ?>
+    <div class="product">
 
-<div class="product">
+        <img src="<?=base_url?>uploads/images/<?=$product->imagen?>" alt="">
+        <h2><?=$product->nombre?></h2>
+        <p><?=$product->precio?></p>
+        <a href="" class="button">Comprar</a>
+    </div>
+<?php endwhile;?>
 
-    <img src="assets/img/logo.png" alt="">
-    <h2>Computador iMac</h2>
-    <p>1900 euros</p>
-    <a href="" class="button">Comprar</a>
-</div>
 
-<div class="product">
 
-    <img src="assets/img/logo.png" alt="">
-    <h2>Computador iMac</h2>
-    <p>1900 euros</p>
-    <a href="" class="button">Comprar</a>
-</div>
-
-<div class="product">
-
-    <img src="assets/img/logo.png" alt="">
-    <h2>Computador iMac</h2>
-    <p>1900 euros</p>
-    <a href="" class="button">Comprar</a>
-</div>
 
 
 

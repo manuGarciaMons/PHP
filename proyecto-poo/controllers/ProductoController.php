@@ -25,7 +25,7 @@ class productoController{
 	}
 	
 	public function gestion(){
-		//Utils::isAdmin();
+		Utils::isAdmin();
 		
 		$producto = new Producto();
 		$productos = $producto->getAll();
@@ -34,12 +34,12 @@ class productoController{
 	}
 	
 	public function crear(){
-		//Utils::isAdmin();
+		Utils::isAdmin();
 		require_once 'views/producto/crear.php';
 	}
 	
 	public function save(){
-	//	Utils::isAdmin();
+		Utils::isAdmin();
 		if(isset($_POST)){
 			$nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
 			$descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : false;
@@ -97,7 +97,7 @@ class productoController{
 	}
 	
 	public function editar(){
-		//Utils::isAdmin();
+		Utils::isAdmin();
 		if(isset($_GET['id'])){
 			$id = $_GET['id'];
 			$edit = true;
@@ -115,7 +115,7 @@ class productoController{
 	}
 	
 	public function eliminar(){
-		//Utils::isAdmin();
+		Utils::isAdmin();
 		
 		if(isset($_GET['id'])){
 			$id = $_GET['id'];
