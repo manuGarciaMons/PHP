@@ -28,4 +28,39 @@ class Utils
         $categorias= $categoria->getAll();
         return $categorias;
     }
+
+
+    public static function statsCarrito(){
+        $stats = array(
+            'count' => 0,
+            'total' => 0
+        );
+
+        if(isset($_SESSION['carrito'])){
+            $stats['count'] = count($_SESSION['carrito']);
+
+            foreach($_SESSION['carrito'] as $producto){
+                $stats['total'] += $producto['precio']*$producto['unidades'];
+            }
+        }
+
+        return $stats;
+    }
+
+    public static function showStatus($status){
+        $value = 'Pendiente';
+
+        if($status == 'confirm'){
+            $value = 'Pendiente';
+        }elseif($status == 'preparation'){
+            $value = 'En preparación';
+        }elseif($status == 'ready'){
+            $value = 'Preparado para enviar';
+        }elseif($status = 'sended'){
+            $value = 'Enviado';
+        }
+
+        return $value;
+    }
+
 }
