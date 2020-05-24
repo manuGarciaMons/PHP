@@ -93,6 +93,7 @@ class Producto{
 		$productos = $this->db->query("SELECT * FROM productos ORDER BY id DESC");
 		return $productos;
 	}
+
 	
 	public function getAllCategory(){
 		$sql = "SELECT p.*, c.nombre AS 'catnombre' FROM productos p "
